@@ -168,16 +168,31 @@ function esPrimo(num) {
    // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
-   if(num === 2){
-      return true;
-   }else if(num < 2){
-      return false;
-   }for(var i = 2 ; i < num; i++){
-      if(num % i === 0){
-         return false;
+   // if(num === 2){
+   //    return true;
+   // }else if(num < 2){
+   //    return false;
+   // }for(var i = 2 ; i < num; i++){
+   //    if(num % i === 0){
+   //       return false;
+   //    }
+   // }
+   // return true;
+   let contador=0
+   if(num < 2){
+      return false
+   }else{
+      for (let i = 1;  i<=num ; i++) {
+         if(num%i == 0){
+            contador ++
+         }
+      }
+      if (contador<3) {
+         return true
+      }else {
+         return false
       }
    }
-   return true;
 }
 
 
@@ -199,25 +214,24 @@ function tieneTresDigitos(num) {
    // Tu código:
    if (num > 99 && num < 1000){
       return true;
-}else{
-   return false;
+   }else{
+      return false;
+   }
 }
-}
+
 
 function doWhile(num) {
    // Implementar una función que aumente el valor recibido en 5 hasta un límite de 8 veces.
    // Retornar el valor final.
    // Utilizar el bucle Do-While.
    // Tu código:
-   let result = '';
-   let i = 5;
+   let i = 0;
 
-do {
-  i = i + 1;
-  result = result + i;
-} while (i < 8);
-
-return result;;
+   do {
+   i = i + 1;
+   num += 5;
+   } while (i < 8);
+   return num;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
