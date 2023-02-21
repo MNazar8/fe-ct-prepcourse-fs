@@ -179,6 +179,20 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+   let nuevoArray=[];
+   let suma=num;
+   for (let i = 1; i < 11; i++) {
+      suma=suma+2; 
+      if (suma === i){
+         break;
+      }else {
+      nuevoArray.push(suma);
+   }
+} if (nuevoArray.length<10){
+   return "Se interrumpió la ejecución";
+}else if(nuevoArray.length===10){
+   return nuevoArray;
+}
 }
 
 function continueStatement(num) {
@@ -188,6 +202,16 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+   let nuevoArray=[];
+   let suma=num;
+   for (let i = 0; i < 10; i++) {
+      if (i === 5){
+         continue;
+      } else {
+         suma = suma +2;
+      nuevoArray.push(suma);
+     }
+   } return nuevoArray;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
